@@ -1,0 +1,951 @@
+/* STEP 1: Basic page reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STEP 2: Main website appearance */
+
+body {
+    background-color: #100D0B;
+    color: #F5E8DC;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* NAVIGATION BAR */
+
+.site-header {
+
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+padding: 24px 5%;
+border-bottom: 1px solid #33251F;
+gap: 30px;
+
+}
+
+.logo {
+  
+color: #F5E8DC;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+white-space: nowrap;
+
+}
+
+.logo span {
+color: #C6A47E;
+}
+
+.main-nav {
+display: flex;
+align-items: center;
+gap: 22px;
+}
+
+.main-nav a {
+color: #D8C9BD;
+text-decoration: none;
+font-size: 14px;
+transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+color: #C6A47E;
+}
+
+.booking-button {
+display: inline-block;
+background-color: #C6A47E;
+color: #100D0B;
+padding: 12px 20px;
+text-decoration: none;
+font-size: 13px;
+font-weight: bold;
+white-space: nowrap;
+transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+background-color: #E1C6A5;
+}
+
+/* HERO SECTION */
+
+.hero {
+min-height: 80vh;
+display: grid;
+grid-template-columns: 1fr 0.9fr;
+align-items: center;
+gap: 55px;
+padding: 60px 8%;
+
+}
+
+.hero-content {
+max-width: 600px;
+}
+
+.hero-label {
+color: #C6A47E;
+font-size: 12px;
+letter-spacing: 4px;
+margin-bottom: 25px;
+}
+
+.hero h1 {
+font-family: Georgia, serif;
+font-size: clamp(42px, 5vw, 72px);
+font-weight: normal;
+line-height: 1.12;
+margin-bottom: 25px;
+}
+
+.hero h1 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.hero-description {
+color: #C8BBB1;
+font-size: 16px;
+line-height: 1.9;
+max-width: 460px;
+margin-bottom: 32px;
+}
+
+.hero-buttons {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 18px;
+}
+
+.secondary-button {
+color: #F5E8DC;
+text-decoration: none;
+font-size: 14px;
+border-bottom: 1px solid #C6A47E;
+padding: 10px 0;
+}
+
+.hero-note {
+margin-top: 45px;
+color: #8F8177;
+font-size: 10px;
+letter-spacing: 2px;
+}
+
+.hero-image {
+width: 100%;
+height: 540px;
+overflow: hidden;
+}
+
+.hero-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* BRAND INTRODUCTION SECTION */
+
+.brand-intro {
+padding: 110px 8%;
+background-color: #100D0B;
+text-align: center;
+}
+
+.brand-intro-content {
+max-width: 850px;
+margin: 0 auto;
+}
+
+.section-label {
+color: #C6A47E;
+font-size: 11px;
+letter-spacing: 4px;
+margin-bottom: 28px;
+}
+
+.brand-intro h2 {
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: clamp(32px, 4vw, 52px);
+font-weight: 400;
+line-height: 1.25;
+margin-bottom: 28px;
+}
+
+.brand-intro h2 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.brand-description {
+max-width: 650px;
+margin: 0 auto;
+color: #C8BBB1;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.brand-divider {
+width: 65px;
+height: 1px;
+background-color: #C6A47E;
+margin: 38px auto;
+}
+
+.brand-signature {
+color: #C6A47E;
+font-size: 10px;
+letter-spacing: 3px;
+line-height: 1.8;
+}
+
+/* SERVICES SECTION */
+
+.services-section {
+padding: 110px 8%;
+background-color: #15100D;
+}
+
+.services-heading {
+max-width: 700px;
+margin: 0 auto 60px;
+text-align: center;
+}
+
+.services-heading h2 {
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: clamp(32px, 4vw, 52px);
+font-weight: 400;
+line-height: 1.2;
+margin-bottom: 24px;
+}
+
+.services-heading h2 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.services-intro {
+max-width: 550px;
+margin: 0 auto;
+color: #C8BBB1;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 28px;
+}
+
+.service-card {
+min-width: 0;
+}
+
+.service-image {
+position: relative;
+height: 340px;
+background-color: #28201A;
+overflow: hidden;
+}
+
+.service-image span {
+position: absolute;
+top: 18px;
+left: 18px;
+color: #F5E8DC;
+font-size: 12px;
+letter-spacing: 2px;
+}
+
+.service-info {
+padding: 24px 0;
+}
+
+.service-info h3 {
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: 24px;
+font-weight: 400;
+margin-bottom: 12px;
+}
+
+.service-info p {
+color: #C8BBB1;
+font-size: 14px;
+line-height: 1.8;
+}
+
+.services-footer {
+margin-top: 35px;
+text-align: center;
+}
+
+/* PORTFOLIO SECTION */
+
+.portfolio-section {
+padding: 110px 8%;
+background-color: #100D0B;
+}
+
+.portfolio-heading {
+max-width: 700px;
+margin: 0 auto 60px;
+text-align: center;
+}
+
+.portfolio-heading h2 {
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: clamp(32px, 4vw, 52px);
+font-weight: 400;
+line-height: 1.2;
+margin-bottom: 24px;
+}
+
+.portfolio-heading h2 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.portfolio-intro {
+max-width: 550px;
+margin: 0 auto;
+color: #C8BBB1;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.portfolio-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 28px;
+}
+
+.portfolio-item {
+position: relative;
+min-width: 0;
+height: 400px;
+overflow: hidden;
+background-color: #28201A;
+}
+
+.portfolio-item img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+}
+
+.portfolio-caption {
+
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 50px 22px 22px;
+background: linear-gradient(
+transparent,
+rgba(16, 13, 11, 0.95)
+);
+
+}
+
+.portfolio-caption span {
+color: #C6A47E;
+font-size: 10px;
+letter-spacing: 2px;
+}
+
+.portfolio-caption h3 {
+margin-top: 10px;
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: 24px;
+font-weight: 400;
+}
+
+.portfolio-footer {
+
+margin-top: 40px;
+text-align: center;
+
+}
+
+
+/* ABOUT THE ARTIST SECTION */
+
+.about-artist {
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+align-items: center;
+gap: 80px;
+padding: 110px 8%;
+background-color: #15100D;
+}
+
+.about-artist-image {
+height: 520px;
+overflow: hidden;
+}
+
+.about-artist-image img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+}
+
+.about-artist-content h2 {
+margin-bottom: 28px;
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: clamp(32px, 4vw, 48px);
+font-weight: 400;
+line-height: 1.25;
+}
+
+.about-artist-content h2 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.about-artist-description {
+margin-bottom: 20px;
+color: #C8BBB1;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.about-artist-content .secondary-button {
+display: inline-block;
+margin-top: 14px;
+}
+
+
+/* BOOKING CALL-TO-ACTION SECTION */
+
+.booking-cta {
+padding: 110px 8%;
+text-align: center;
+background-color: #211914;
+}
+
+.booking-cta h2 {
+max-width: 850px;
+margin: 0 auto 25px;
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: clamp(32px, 4vw, 52px);
+font-weight: 400;
+line-height: 1.25;
+}
+
+.booking-cta h2 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.booking-cta-description {
+max-width: 600px;
+margin: 0 auto 35px;
+color: #C8BBB1;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.booking-cta-button {
+display: inline-block;
+padding: 16px 28px;
+background-color: #C6A47E;
+color: #100D0B;
+text-decoration: none;
+font-size: 13px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+.booking-cta-button:hover {
+background-color: #E1C6A5;
+}
+
+.booking-cta-note {
+
+margin-top: 35px;
+color: #8F8177;
+font-size: 10px;
+letter-spacing: 3px;
+line-height: 1.8;
+
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+padding: 110px 8%;
+text-align: center;
+background-color: #100D0B;
+}
+
+.contact-section h2 {
+max-width: 800px;
+margin: 0 auto 25px;
+color: #F5E8DC;
+font-family: Georgia, serif;
+font-size: clamp(32px, 4vw, 52px);
+font-weight: 400;
+line-height: 1.25;
+}
+
+.contact-section h2 span {
+display: block;
+color: #C6A47E;
+font-style: italic;
+}
+
+.contact-description {
+max-width: 600px;
+margin: 0 auto 35px;
+color: #C8BBB1;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.contact-links {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 18px;
+}
+
+.contact-link {
+display: inline-block;
+padding: 15px 25px;
+background-color: #C6A47E;
+color: #100D0B;
+text-decoration: none;
+font-size: 13px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+background-color: #E1C6A5;
+}
+
+.secondary-contact-link {
+background-color: transparent;
+color: #F5E8DC;
+border: 1px solid #C6A47E;
+}
+
+.secondary-contact-link:hover {
+background-color: #211914;
+}
+
+.contact-note {
+margin-top: 40px;
+color: #8F8177;
+font-size: 10px;
+letter-spacing: 2px;
+line-height: 1.8;
+}
+
+
+/* WEBSITE FOOTER */
+
+.site-footer {
+padding: 70px 8% 25px;
+background-color: #17110E;
+border-top: 1px solid #34271F;
+}
+
+.footer-main {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+gap: 60px;
+padding-bottom: 55px;
+}
+
+.footer-logo {
+display: inline-block;
+margin-bottom: 20px;
+color: #F5E8DC;
+font-size: 22px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.footer-logo span {
+color: #C6A47E;
+}
+
+.footer-brand p {
+max-width: 350px;
+color: #C8BBB1;
+font-size: 14px;
+line-height: 1.9;
+}
+
+.footer-navigation h3,
+.footer-contact h3 {
+margin-bottom: 22px;
+color: #C6A47E;
+font-size: 11px;
+letter-spacing: 2px;
+}
+
+.footer-navigation a,
+.footer-contact a {
+display: block;
+width: fit-content;
+margin-bottom: 14px;
+color: #C8BBB1;
+font-size: 13px;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.footer-navigation a:hover,
+.footer-contact a:hover {
+color: #C6A47E;
+}
+
+.footer-bottom {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+padding-top: 25px;
+border-top: 1px solid #34271F;
+}
+
+.footer-bottom p {
+margin: 0;
+color: #8F8177;
+font-size: 11px;
+line-height: 1.8;
+}
+
+
+
+
+/* RESPONSIVE LAYOUT — TABLETS AND MOBILE */
+
+@media (max-width: 768px) {
+
+/* HERO SECTION */
+.hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 6%;
+}
+
+.hero-image {
+    height: 450px;
+}
+
+.hero-note {
+    margin-top: 30px;
+}
+
+/* MOBILE HEADER */
+.site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 6%;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 20px;
+    width: 100%;
+}
+
+.booking-button {
+    align-self: flex-start;
+}
+
+/* SERVICES SECTION */
+.services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* PORTFOLIO SECTION */
+.portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* ABOUT THE ARTIST */
+.about-artist {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* FOOTER */
+.footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+}
+
+.footer-brand {
+    grid-column: 1 / -1;
+}
+
+}
+
+
+
+
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 480px) {
+
+
+/* HERO SECTION */
+.hero {
+    padding: 45px 6%;
+    gap: 30px;
+}
+
+.hero-image {
+    height: 360px;
+}
+
+.hero-buttons {
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* SERVICES */
+.services-grid {
+    grid-template-columns: 1fr;
+}
+
+/* PORTFOLIO */
+.portfolio-grid {
+    grid-template-columns: 1fr;
+}
+
+/* BOOKING SECTION */
+.booking-cta,
+.contact-section {
+    padding: 75px 6%;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 55px 6% 25px;
+}
+
+.footer-main {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.footer-brand {
+    grid-column: auto;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+}
+
+
+
+
+/* ========================================
+   BOOKING PAGE
+======================================== */
+
+.booking-hero {
+    padding: 100px 8% 60px;
+    text-align: center;
+    background-color: #100D0B;
+}
+
+.booking-hero h1 {
+    color: #F5E8DC;
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.booking-hero h1 span {
+    display: block;
+    color: #C6A47E;
+    font-style: italic;
+}
+
+.booking-intro {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #C8BBB1;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.booking-form-section {
+    padding: 60px 8% 100px;
+    background-color: #15100D;
+}
+
+.booking-form-heading {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.booking-form-heading h2 {
+    color: #F5E8DC;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.booking-form-heading > p:last-child {
+    color: #C8BBB1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+#booking-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #211914;
+    border: 1px solid #34271F;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #F5E8DC;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #100D0B;
+    color: #F5E8DC;
+    border: 1px solid #574436;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #C6A47E;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8F8177;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#booking-form .booking-button {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-note {
+    margin-top: 22px;
+    color: #A99A8E;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.site-footer {
+    padding: 35px 8%;
+    background-color: #100D0B;
+    color: #C8BBB1;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .booking-hero {
+        padding: 65px 6% 40px;
+    }
+
+    .booking-form-section {
+        padding: 45px 6% 65px;
+    }
+
+    #booking-form {
+        padding: 25px 20px;
+    }
+
+    .booking-form-heading {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #booking-form {
+        padding: 22px 16px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 13px 12px;
+    }
+}

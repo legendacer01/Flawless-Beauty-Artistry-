@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Book an Appointment | Flawless Beauty Artistry</title>
+</head>
+
+<body>
+
+    <!-- WEBSITE HEADER -->
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            Flawless <span>Beauty Artistry</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="booking.html" class="booking-button">
+            Book Appointment
+        </a>
+
+    </header>
+
+
+    <!-- BOOKING PAGE INTRODUCTION -->
+    <section class="booking-hero">
+
+        <p class="section-label">YOUR BEAUTY EXPERIENCE BEGINS HERE</p>
+
+        <h1>
+            Let's create
+            <span>your perfect look.</span>
+        </h1>
+
+        <p class="booking-intro">
+            Tell us about your special moment, and let's create
+            a makeup experience tailored to you.
+        </p>
+
+    </section>
+
+
+    <!-- BOOKING FORM SECTION -->
+    <section class="booking-form-section">
+
+        <div class="booking-form-heading">
+
+            <p class="section-label">APPOINTMENT REQUEST</p>
+
+            <h2>Your details, please.</h2>
+
+            <p>
+                Complete the form below to send your appointment
+                request directly to our WhatsApp.
+            </p>
+
+        </div>
+
+
+        <!-- JavaScript will handle the form submission -->
+        <form id="booking-form">
+
+            <!-- CLIENT INFORMATION -->
+            <div class="form-group">
+
+                <label for="client-name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="client-name"
+                    name="clientName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="client-phone">WhatsApp Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="client-phone"
+                    name="clientPhone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <!-- MAKEUP SERVICE -->
+            <div class="form-group">
+
+                <label for="makeup-service">Choose Your Makeup Service</label>
+
+                <select id="makeup-service" name="makeupService" required>
+
+                    <option value="">Select a service</option>
+
+                    <option value="Bridal Makeup">Bridal Makeup</option>
+
+                    <option value="Traditional Wedding Makeup">
+                        Traditional Wedding Makeup
+                    </option>
+
+                    <option value="Special Occasion Makeup">
+                        Special Occasion Makeup
+                    </option>
+
+                    <option value="Photoshoot Makeup">
+                        Photoshoot Makeup
+                    </option>
+
+                    <option value="Other">Other</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- APPOINTMENT DATE AND TIME -->
+            <div class="form-group">
+
+                <label for="appointment-date">Preferred Date</label>
+
+                <input
+                    type="date"
+                    id="appointment-date"
+                    name="appointmentDate"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="appointment-time">Preferred Time</label>
+
+                <input
+                    type="time"
+                    id="appointment-time"
+                    name="appointmentTime"
+                    required
+                >
+
+            </div>
+
+
+            <!-- LOCATION -->
+            <div class="form-group">
+
+                <label for="appointment-location">Makeup Location</label>
+
+                <input
+                    type="text"
+                    id="appointment-location"
+                    name="appointmentLocation"
+                    placeholder="Where will the makeup take place?"
+                    required
+                >
+
+            </div>
+
+
+            <!-- ADDITIONAL INFORMATION -->
+            <div class="form-group">
+
+                <label for="additional-notes">
+                    Additional Notes
+                </label>
+
+                <textarea
+                    id="additional-notes"
+                    name="additionalNotes"
+                    rows="5"
+                    placeholder="Tell us about your event or any special requests..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- FORM SUBMISSION -->
+            <button type="submit" class="booking-button">
+                Continue to WhatsApp
+            </button>
+
+            <p class="form-note">
+                Your appointment is not confirmed until the details
+                have been reviewed and confirmed by Flawless Beauty Artistry.
+            </p>
+
+        </form>
+
+    </section>
+
+
+    <!-- WEBSITE FOOTER -->
+    <footer class="site-footer">
+
+        <p>
+            Flawless Beauty Artistry — Beauty beyond ordinary.
+        </p>
+
+        <p>
+            &copy; 2026 Flawless Beauty Artistry. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
