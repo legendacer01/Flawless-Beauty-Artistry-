@@ -1,5 +1,6 @@
 const bookingForm = document.getElementById("booking-form");
 
+if (bookingForm) {
 bookingForm.addEventListener("submit", function (event) {
 event.preventDefault();
 
@@ -44,3 +45,30 @@ window.open(whatsappURL, "_blank");
 
 
 });
+
+}
+
+
+// MOBILE NAVIGATION MENU 
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+if (menuToggle && mainNav) {
+
+menuToggle.addEventListener("click", function () {
+
+    menuToggle.classList.toggle("active");
+
+    mainNav.classList.toggle("active");
+
+    const isOpen = mainNav.classList.contains("active");
+
+    menuToggle.setAttribute(
+        "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+});
+
+}

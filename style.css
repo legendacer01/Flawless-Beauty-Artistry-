@@ -61,6 +61,31 @@ transition: color 0.3s ease;
 color: #C6A47E;
 }
 
+.main-nav .booking-button {
+
+margin-left: 25px;
+
+}
+
+/* HEADER BOOOKING  BUTTON */
+
+.main-nav .booking-button {
+background-color: #C6A47E;
+color: #100D0B;
+text-decoration: none;
+padding: 15px 25px;
+font-weight: bold;
+border: none;
+
+}
+
+.main-nav .booking-button:hover {
+    
+background-color: #E1C6A5;
+color: #100D0B;
+
+}
+
 .booking-button {
 display: inline-block;
 background-color: #C6A47E;
@@ -104,7 +129,8 @@ margin-bottom: 25px;
 font-family: Georgia, serif;
 font-size: clamp(42px, 5vw, 72px);
 font-weight: normal;
-line-height: 1.12;
+line-height: 1.08;
+letter-spacing: -1.5px;
 margin-bottom: 25px;
 }
 
@@ -117,8 +143,8 @@ font-style: italic;
 .hero-description {
 color: #C8BBB1;
 font-size: 16px;
-line-height: 1.9;
-max-width: 460px;
+line-height: 1.8;
+max-width: 440px;
 margin-bottom: 32px;
 }
 
@@ -146,15 +172,21 @@ letter-spacing: 2px;
 
 .hero-image {
 width: 100%;
+max-width: 480px;
 height: 540px;
 overflow: hidden;
+justify-self: end;
+object-fit: cover;
+/* overflow: hidden; */
 }
 
 .hero-image img {
 width: 100%;
 height: 100%;
 object-fit: cover;
+object-position: center 30%;
 display: block;
+
 }
 
 /* BRAND INTRODUCTION SECTION */
@@ -260,17 +292,24 @@ gap: 28px;
 min-width: 0;
 }
 
-.service-image img{
+.service-image {
 
 position: relative;
+width: 100%;
 height: 340px;
-background-color: #28201A;
 overflow: hidden;
+background-color: #28201A;
 
-/* width: 100%;
+}
+
+
+.service-image img{
+
+width: 100%;
 height: 100%;
 display: block;
-object-fit: cover; */
+object-fit: cover;
+object-position: center;
 
 }
 
@@ -664,7 +703,13 @@ font-size: 11px;
 line-height: 1.8;
 }
 
+/* HIDE HAMBURGER ON DESKTOP */
 
+.menu-toggle {
+
+display: none;
+
+}
 
 
 /* RESPONSIVE LAYOUT — TABLETS AND MOBILE */
@@ -687,22 +732,81 @@ line-height: 1.8;
 }
 
 /* MOBILE HEADER */
+
 .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     padding: 20px 6%;
 }
 
-.main-nav {
+/* HAMBURGER BUTTON */
+
+.menu-toggle {
     display: flex;
-    flex-wrap: wrap;
-    gap: 18px 20px;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #C6A47E;
+    cursor: pointer;
 }
 
-.booking-button {
-    align-self: flex-start;
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F5E8DC;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* HAMBURGER ANIMATION */
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE NAVIGATION */
+
+.main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.main-nav.active {
+    display: flex;
+}
+
+
+/*  BOOKING BUTTON INSIDE MENU */
+
+.main-nav .booking-button {
+margin: 8px auto 0;
+width: 220px;
+text-align: center;
+}
+/* BOOKING BUTTON */
+
+.site-header > .booking-button {
+    display: block;
+    margin: 0 auto;
 }
 
 /* SERVICES SECTION */
@@ -743,6 +847,29 @@ line-height: 1.8;
 
 @media (max-width: 480px) {
 
+
+/* HEADER */
+.site-header {
+   
+    gap: 16px;
+    padding: 20px 5%;
+
+}
+
+.main-nav {
+    gap: 12px 16px;
+}
+
+.main-nav a {
+    font-size: 12px;
+}
+
+site-header > .booking-button {
+
+    width: 100%;
+    text-align: center;
+
+}
 
 /* HERO SECTION */
 .hero {
