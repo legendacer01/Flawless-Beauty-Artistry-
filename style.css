@@ -991,6 +991,121 @@ body {
     border: 1px solid #34271F;
 }
 
+
+/* BOOKING PROGRESS */
+
+.booking-progress {
+    margin-bottom: 35px;
+}
+
+#step-counter {
+    color: #C6A47E;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.progress-track {
+    display: flex;
+    gap: 8px;
+}
+
+.progress-segment {
+    flex: 1;
+    height: 3px;
+    background-color: #40342C;
+}
+
+.progress-segment.active {
+    background-color: #C6A47E;
+}
+
+
+/* INDIVIDUAL BOOKING STEPS */
+
+.booking-step h2 {
+    color: #F5E8DC;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.booking-step > p {
+    color: #C8BBB1;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Keep hidden steps hidden */
+.booking-step[hidden] {
+    display: none;
+}
+
+
+/* STEP NAVIGATION */
+
+.step-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.step-navigation button {
+    flex: 1;
+}
+
+.previous-step {
+    padding: 16px 20px;
+    background-color: transparent;
+    color: #C6A47E;
+    border: 1px solid #574436;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* BOOKING SUMMARY */
+
+#booking-summary {
+    margin: 30px 0;
+    padding: 10px 25px;
+    background-color: #17110E;
+    border: 1px solid #574436;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid #34271F;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    color: #C6A47E;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 130px;
+}
+
+.summary-value {
+    color: #F5E8DC;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+
+
 .form-group {
     margin-bottom: 25px;
 }

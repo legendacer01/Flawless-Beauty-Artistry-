@@ -72,138 +72,149 @@
         <!-- JavaScript will handle the form submission -->
         <form id="booking-form">
 
-            <!-- CLIENT INFORMATION -->
-            <div class="form-group">
+            <!-- BOOKING PROGRESS -->
+            <div class="booking-progress">
 
-                <label for="client-name">Full Name</label>
+                <p id="step-counter">STEP 01 OF 03</p>
 
-                <input
-                    type="text"
-                    id="client-name"
-                    name="clientName"
-                    placeholder="Enter your full name"
-                    required
-                >
+                <div class="progress-track">
+                    <span class="progress-segment active"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                </div>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- STEP 1: CUSTOMER DETAILS -->
+            <div class="booking-step" id="step-1">
 
-                <label for="client-phone">WhatsApp Phone Number</label>
+                <h2>Your details</h2>
+                <p>Let's get to know you and your preferred makeup service.</p>
 
-                <input
-                    type="tel"
-                    id="client-phone"
-                    name="clientPhone"
-                    placeholder="Enter your phone number"
-                    required
-                >
+                <div class="form-group">
+                    <label for="client-name">Full Name</label>
 
-            </div>
+                    <input type="text" id="client-name" name="clientName" placeholder="Enter your full name" required>
+                </div>
 
 
-            <!-- MAKEUP SERVICE -->
-            <div class="form-group">
+                <div class="form-group">
+                    <label for="client-phone">WhatsApp Phone Number</label>
 
-                <label for="makeup-service">Choose Your Makeup Service</label>
-
-                <select id="makeup-service" name="makeupService" required>
-
-                    <option value="">Select a service</option>
-
-                    <option value="Bridal Makeup">Bridal Makeup</option>
-
-                    <option value="Traditional Wedding Makeup">
-                        Traditional Wedding Makeup
-                    </option>
-
-                    <option value="Special Occasion Makeup">
-                        Special Occasion Makeup
-                    </option>
-
-                    <option value="Photoshoot Makeup">
-                        Photoshoot Makeup
-                    </option>
-
-                    <option value="Other">Other</option>
-
-                </select>
-
-            </div>
+                    <input type="tel" id="client-phone" name="clientPhone" placeholder="Enter your phone number"
+                        required>
+                </div>
 
 
-            <!-- APPOINTMENT DATE AND TIME -->
-            <div class="form-group">
+                <div class="form-group">
+                    <label for="makeup-service">Choose Your Makeup Service</label>
 
-                <label for="appointment-date">Preferred Date</label>
+                    <select id="makeup-service" name="makeupService" required>
 
-                <input
-                    type="date"
-                    id="appointment-date"
-                    name="appointmentDate"
-                    required
-                >
+                        <option value="">Select a service</option>
+                        <option value="Bridal Makeup">Bridal Makeup</option>
+                        <option value="Traditional Wedding Makeup">Traditional Wedding Makeup</option>
+                        <option value="Special Occasion Makeup">Special Occasion Makeup</option>
+                        <option value="Photoshoot Makeup">Photoshoot Makeup</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+                </div>
+
+
+                <button type="button" class="booking-button next-step">
+                    Continue to Appointment Details →
+                </button>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- STEP 2: APPOINTMENT DETAILS -->
+            <div class="booking-step" id="step-2" hidden>
 
-                <label for="appointment-time">Preferred Time</label>
+                <h2>Appointment details</h2>
+                <p>Tell us when and where you'd like your appointment.</p>
 
-                <input
-                    type="time"
-                    id="appointment-time"
-                    name="appointmentTime"
-                    required
-                >
+                <div class="form-group">
+                    <label for="appointment-date">Preferred Date</label>
+
+                    <input type="date" id="appointment-date" name="appointmentDate" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="appointment-time">Preferred Time</label>
+
+                    <input type="time" id="appointment-time" name="appointmentTime" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="appointment-location">Makeup Location</label>
+
+                    <input type="text" id="appointment-location" name="appointmentLocation"
+                        placeholder="Where will the makeup take place?" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="additional-notes">Additional Notes</label>
+
+                    <textarea id="additional-notes" name="additionalNotes" rows="5"
+                        placeholder="Tell us about your event or special requests..."></textarea>
+                </div>
+
+
+                <div class="step-navigation">
+
+                    <button type="button" class="previous-step">
+                        ← Back
+                    </button>
+
+                    <button type="button" class="booking-button next-step">
+                        Review Booking →
+                    </button>
+
+                </div>
 
             </div>
 
 
-            <!-- LOCATION -->
-            <div class="form-group">
+            <!-- STEP 3: REVIEW BOOKING -->
+            <div class="booking-step" id="step-3" hidden>
 
-                <label for="appointment-location">Makeup Location</label>
+                <h2>Review your booking</h2>
 
-                <input
-                    type="text"
-                    id="appointment-location"
-                    name="appointmentLocation"
-                    placeholder="Where will the makeup take place?"
-                    required
-                >
+                <p>
+                    Please review your information before sending
+                    your appointment request.
+                </p>
+
+                <div id="booking-summary">
+
+                    <!-- JavaScript will display booking details here -->
+
+                </div>
+
+                <div class="step-navigation">
+
+                    <button type="button" class="previous-step">
+                        ← Back
+                    </button>
+
+                    <button type="submit" class="booking-button">
+                        Send Booking Request via WhatsApp →
+                    </button>
+
+                </div>
+
+                <p class="form-note">
+                    Your appointment is not confirmed until
+                    Flawless Beauty Artistry reviews and confirms your request.
+                </p>
 
             </div>
-
-
-            <!-- ADDITIONAL INFORMATION -->
-            <div class="form-group">
-
-                <label for="additional-notes">
-                    Additional Notes
-                </label>
-
-                <textarea
-                    id="additional-notes"
-                    name="additionalNotes"
-                    rows="5"
-                    placeholder="Tell us about your event or any special requests..."
-                ></textarea>
-
-            </div>
-
-
-            <!-- FORM SUBMISSION -->
-            <button type="submit" class="booking-button">
-                Continue to WhatsApp
-            </button>
-
-            <p class="form-note">
-                Your appointment is not confirmed until the details
-                have been reviewed and confirmed by Flawless Beauty Artistry.
-            </p>
 
         </form>
 
@@ -230,4 +241,3 @@
 </body>
 
 </html>
-
