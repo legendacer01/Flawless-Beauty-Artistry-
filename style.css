@@ -1031,7 +1031,7 @@ body {
     margin-bottom: 12px;
 }
 
-.booking-step > p {
+.booking-step>p {
     color: #C8BBB1;
     font-size: 14px;
     line-height: 1.8;
@@ -1202,6 +1202,22 @@ body {
     .form-group textarea {
         padding: 13px 12px;
     }
+
+    /* Stack booking navigation buttons on mobile */
+    .step-navigation {
+        flex-direction: column;
+    }
+
+    .step-navigation button {
+        width: 100%;
+        flex: none;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-align: center;
+        line-height: 1.5;
+
+    }
+
 }
 
 
@@ -2086,22 +2102,22 @@ body {
 
 
 
-.artist-philosophy {
-    grid-template-columns: 1fr;
-    gap: 45px;
-}
+    .artist-philosophy {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
 
-.artist-philosophy-image {
-    max-width: 520px;
-    margin: 0 auto;
-}
+    .artist-philosophy-image {
+        max-width: 520px;
+        margin: 0 auto;
+    }
 
-.artist-philosophy-content {
-    max-width: 650px;
-    margin: 0 auto;
-}
+    .artist-philosophy-content {
+        max-width: 650px;
+        margin: 0 auto;
+    }
 
-    
+
 }
 
 
@@ -2631,7 +2647,7 @@ body {
     font-style: italic;
 }
 
-.portfolio-hero-content > p:not(.section-label) {
+.portfolio-hero-content>p:not(.section-label) {
     color: #C8BBB1;
     font-size: 15px;
     line-height: 1.9;
@@ -2668,7 +2684,7 @@ body {
     font-style: italic;
 }
 
-.portfolio-gallery-heading > p:not(.section-label) {
+.portfolio-gallery-heading>p:not(.section-label) {
     color: #C8BBB1;
     font-size: 14px;
     line-height: 1.9;
@@ -2731,7 +2747,7 @@ body {
     font-style: italic;
 }
 
-.portfolio-booking-content > p:not(.section-label):not(.portfolio-cta-note) {
+.portfolio-booking-content>p:not(.section-label):not(.portfolio-cta-note) {
     color: #C8BBB1;
     font-size: 14px;
     line-height: 1.9;
@@ -2800,7 +2816,7 @@ body {
         font-size: clamp(32px, 9vw, 42px);
     }
 
-    .portfolio-hero-content > p:not(.section-label) {
+    .portfolio-hero-content>p:not(.section-label) {
         font-size: 14px;
     }
 
@@ -2837,7 +2853,7 @@ body {
         font-size: 36px;
     }
 
-    .portfolio-booking-content > p:not(.section-label):not(.portfolio-cta-note) {
+    .portfolio-booking-content>p:not(.section-label):not(.portfolio-cta-note) {
         font-size: 13px;
     }
 
