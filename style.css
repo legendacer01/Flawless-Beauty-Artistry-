@@ -2117,9 +2117,7 @@ body {
         margin: 0 auto;
     }
 
-
 }
-
 
 
 @media (max-width: 600px) {
@@ -2158,6 +2156,42 @@ body {
         object-fit: contain;
     }
 
+    /* ABOUT HERO MOBILE */
+
+.about-hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px 6%;
+}
+
+.about-hero-content {
+    max-width: 100%;
+}
+
+.about-hero-content h1 {
+    font-size: clamp(38px, 9vw, 48px);
+    line-height: 1.15;
+}
+
+.about-hero-description {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+}
 
 }
 
